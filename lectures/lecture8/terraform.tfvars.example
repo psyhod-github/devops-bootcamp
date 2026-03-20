@@ -1,0 +1,17 @@
+# Скопируйте в terraform.tfvars и заполните:
+#
+# Windows (PowerShell):
+#   Copy-Item terraform.tfvars.example terraform.tfvars
+#
+# Mac/Linux:
+#   cp terraform.tfvars.example terraform.tfvars
+#
+# key_name → AWS Console → EC2 → Key Pairs → столбец "Key pair name"
+# bucket   → замените YOUR_ACCOUNT_ID в main.tf на ваш Account ID
+#            (узнать: aws sts get-caller-identity --query Account --output text --profile terraform-user)
+
+key_name = "your-key-pair-name"
+
+# Необязательно (есть defaults):
+# region        = "us-west-2"
+# instance_type = "t2.micro"
